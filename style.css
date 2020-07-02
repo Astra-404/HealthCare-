@@ -1,0 +1,21 @@
+.nav-content{
+	padding: 10px;
+}
+.nav-item{
+	padding-top: 20px;
+}
+.cart{
+	padding-top: 20px;
+}
+ul li a:hover{
+	text-decoration: none; 
+	font-color:#317bff;	
+	
+}
+ul li a{
+	font-weight: 600;
+	color:#a7adbc;
+}
+.search{
+	border-radius:20%;
+}
