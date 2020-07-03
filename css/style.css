@@ -1,0 +1,99 @@
+@font-face{
+    src: url(fonts/headings.ttf);
+    font-family: heading;
+}
+@font-face{
+    src: url(fonts/content.ttf);
+    font-family: text;
+}
+
+h1 {
+	font-family: 'text';
+}
+
+h3 {
+	font-family: 'heading';
+}
+
+
+.nav-content{
+	padding: 10px;
+}
+.nav-item{
+	padding-top: 20px;
+}
+.cart{
+	padding-top: 20px;
+}
+ul li a:hover{
+	text-decoration: none; 
+	color:#317bff;	
+	
+}
+ul li a{
+	font-weight: 600;
+	color:#a7adbc;
+}
+.search{
+	border-radius:20%;
+}
+
+/* Carousel Slider CSS */
+.carousel-caption {
+	margin-left: -50%;
+	animation: slideIn 2s linear;
+}
+
+.carousel-caption h1{
+	margin-top:-400px;
+	font-size: 48px;
+
+}
+.carousel-caption h1, h3{
+	color : #ffffff;
+	
+	/* text-align: left; */
+
+}
+.carousel-caption  h3{
+	color:rgb(255, 255, 255);
+	font-size:25px; 
+	}
+
+.carousel-caption a{
+	color: #000;
+	background-color: #ffffff;
+	border-color: #10bef3;
+	/* margin-left: -90%; */
+}
+
+#carousel2 {
+	margin-left:50%;
+}
+/* Animation On Hover  */
+
+.carousel-item {
+	animation: fade 1s linear;
+}
+
+@keyframes fade {
+	from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0px;
+		margin-top: -100px;
+	}
+	to {
+		opacity: 1px;
+		margin-top: -400px;
+	}
+}
