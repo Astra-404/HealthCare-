@@ -1,20 +1,24 @@
 @font-face{
-    src: url(fonts/headings.ttf);
-    font-family: heading;
+    src: url(../fonts/headings.ttf);
+    font-family: headings;
 }
 @font-face{
-    src: url(fonts/content.ttf);
-    font-family: text;
+    src: url(../fonts/content.ttf);
+    font-family: content;
 }
-
+/* 
 h1 {
 	font-family: 'text';
 }
 
 h3 {
 	font-family: 'heading';
-}
+} */
 
+html {
+	scroll-behavior: smooth;
+	font-family:'content';
+}
 
 .nav-content{
 	padding: 10px;
@@ -25,6 +29,7 @@ h3 {
 .cart{
 	padding-top: 20px;
 }
+
 ul li a:hover{
 	text-decoration: none; 
 	color:#317bff;	
@@ -51,7 +56,7 @@ ul li a{
 }
 .carousel-caption h1, h3{
 	color : #ffffff;
-	
+	font-family: 'text';
 	/* text-align: left; */
 
 }
@@ -70,23 +75,37 @@ ul li a{
 #carousel2 {
 	margin-left:50%;
 }
-/* Animation On Hover  */
+
+.ProdImg {
+	padding: 10px;
+	transition: 3s;
+	overflow: hidden;
+}
+
+
 
 .carousel-item {
 	animation: fade 1s linear;
 }
+	
+/* Animation */
+.prodImg:hover {
+	
+	transform: scale(1.1);
+	transition-duration: 1s;
+}	
 
+/* Animation Fade  */
 @keyframes fade {
 	from {
         opacity: 0;
-        transform: rotateX(-10deg);
     }
     to {
         opacity: 1;
-        transform: rotateX(0);
     }
 }
 
+/* Animation Slide In */
 @keyframes slideIn {
 	from {
 		opacity: 0px;

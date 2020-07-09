@@ -25,10 +25,10 @@
 						
 						<div class="nav-item">
 							<ul style="list-style: none; display: flex;">
-								<li style="padding-left: 0px;"><a class="" href="">Home</a></li>
+								<li style="padding-left: 0px;"><a class="" href="index.php">Home</a></li>
 								<li style="padding-left: 30px;"><a class="" href="">Product</a></li>
-								<li style="padding-left: 30px;"><a class="" href="">Contact</a></li>
-								<li style="padding-left: 30px;"><a class="" href="">About</a></li>
+								<li style="padding-left: 30px;"><a class="" href="contact.php">Contact</a></li>
+								<li style="padding-left: 30px;"><a class="" href="about.php">About</a></li>
 			
 							</ul>
 						</div>
@@ -110,21 +110,21 @@
 				<div class="col-lg-4 col-md-4 col-sm-12" style="width: 396px;">
 				<div class="content" style="background-color: #f4ede7; width: 396px;">
 					<!-- Featured product 1 -->
-					<div class=""><img src="images/products/1.png" height='280px' width='100%'> </div>
+					<div class="prodImg"><img src="images/products/1.png" height='280px' width='100%'> </div>
 				</div>	
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-12" style="padding-right:30px; width: 396px;">
 					<div class="content" style="background-color: #e3efed; width: 396px;">
 				<!-- Featured product 2 -->
-					<div class=""><img src="images/products/2.png" height='280px' width='100%'> </div>
+					<div class="prodImg"><img src="images/products/2.png" height='280px' width='100%'> </div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-12" style="width: 396px;">
 					<div class="content"  style="background-color: #e7f2f8; width: 396px;">
 					<!-- Featured product 3 -->
-						<div class=""><img src="images/products/3.png" height='280px' width='100%'> </div>
+						<div class="prodImg"><img class="prodImg" src="images/products/3.png" height='280px' width='100%'> </div>
 					</div>
 				</div>
 			</div>
