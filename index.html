@@ -26,6 +26,17 @@
       a:hover{
         text-decoration: none;
       }
+      #NewArrival{
+        display:flex;
+
+      }
+      #best_seller{
+        display: none;
+
+      }
+      #other{
+        display: none;
+      }
       .border_div{
         border-bottom:1px solid rgba(0, 0, 0, .1);
         border-right:1px solid rgba(0, 0, 0, .1);
@@ -113,6 +124,12 @@
           border: 1px solid rgba(0,0,0,0);
           
         
+    }
+    .active{
+       background-color: #055ec2;
+          color:#fff;
+          background-image: linear-gradient(-45deg, #055ec2, #07a8ff); 
+          border: 1px solid rgba(0,0,0,0);
     }
 
     .quick a{
@@ -391,12 +408,34 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
     </div>
     <div class="row justify-content-center">
-      <ul style="display: flex;">
-          <li class="li"><a class="btn btn-primary CategoryButton" >Nre Arrival</a></li>
-          <li class="li"><a class="btn btn-primary CategoryButton">Best Seller</a></li>
-          <li class="li"><a class="btn btn-primary CategoryButton">Nre Arrival</a></li>
+      <ul id="myDiv" style="display: flex;">
+          <li class="li"><a class="btn btn-primary CategoryButton active" id="CategoryButton1" onclick="myFunction();">Nre Arrival</a></li>
+          <li class="li"><a class="btn btn-primary CategoryButton" id="CategoryButton2" onclick="myFunction1();">Best Seller</a></li>
+          <li class="li"><a class="btn btn-primary CategoryButton" id="CategoryButton3" onclick="myFunction2();">Nre Arrival</a></li>
       </ul>
     </div>
+
+    <style>
+      .Card:hover .product_detail{
+        visibility: visible;
+        transform: translateY(15%);
+      }
+        .Card:hover .quick{
+        visibility: visible;
+        transform: translateY(-30%);
+        animation:fadeIn, 300ms;
+      }
+      .product_detail{
+        visibility: hidden;
+      /*  transform:translateY(-30%);*/
+        transition: all 0.3s;
+      }
+          .quick{
+        visibility: hidden;
+        transition-duration: 300ms, 1ms;
+        
+      }
+    </style>
 <!-- NEw arrival start -->
     <div class="row" id="NewArrival" style="padding: 0px; margin:20px 0px;">
           <div class="col-lg-3 col-md-6 col-sm-12">
@@ -409,7 +448,7 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
@@ -434,7 +473,7 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
@@ -459,7 +498,7 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
@@ -484,7 +523,7 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
@@ -503,7 +542,7 @@
     </div>
     <!-- New Arrival End -->
     <!-- Best Seller Start -->
-        <div class="row" id="NewArrival" style="padding: 0px; margin:20px 0px;">
+        <div class="row" id="best_seller" style="padding: 0px; margin:20px 0px;">
           <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="Card" style="position: relative;  overflow:hidden;">
                 <div class="">
@@ -514,14 +553,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/2.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -539,14 +578,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/2.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -564,14 +603,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/2.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -589,14 +628,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/2.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -609,7 +648,7 @@
     <!-- Best Seller End -->
 
     <!-- 3rd Button start -->
-    <div class="row" id="NewArrival" style="padding: 0px; margin:20px 0px;">
+    <div class="row" id="other" style="padding: 0px; margin:20px 0px;">
           <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="Card" style="position: relative;  overflow:hidden;">
                 <div class="">
@@ -620,14 +659,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/3.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -645,14 +684,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/3.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -670,14 +709,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/3.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -695,14 +734,14 @@
                 </div>
 
                 <div class="">
-                  <div class="product_detail quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
+                  <div class="quick" style="margin:10px 10px;padding:5px 5px; position:absolute; z-index:100; align-content:center; width:90%; bottom: 0px;">
                     <a class="btn btn-primary">Quick View</a>
                   </div>
                 </div>
               
                   <a href="" style="overflow:hidden; position: relative; z-index: 3; top:0;">
                     <div class="images" style="background-color: #eef1fb;  height: 340px; border-radius: 15px;">
-                      <img src="images/1.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
+                      <img src="images/3.png" style="vertical-align: middle;  margin-top:25%; width: 100%;">
                     </div>
                   </a>
 
@@ -745,6 +784,41 @@
           $('ul li').toggleClass("hide");
         });
       });
+    </script>
+    <script>
+      function myFunction() {
+  document.getElementById("NewArrival").style.display = "flex";
+  document.getElementById("best_seller").style.display = "none";
+  document.getElementById("other").style.display = "none";
+
+
+}
+      function myFunction1() {
+  document.getElementById("NewArrival").style.display = "none";
+  document.getElementById("best_seller").style.display = "flex";
+  document.getElementById("other").style.display = "none";
+
+}
+      function myFunction2() {
+  document.getElementById("NewArrival").style.display = "none";
+  document.getElementById("best_seller").style.display = "none";
+  document.getElementById("other").style.display = "flex";
+
+}
+
+var btnContainer = document.getElementById("myDiv");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("CategoryButton");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
     </script>
     </body>
 </html>
