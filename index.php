@@ -66,7 +66,7 @@
 					<img src="images/slide1.jpg" height="750px" width="100%">
 					<div class="carousel-caption">
 						<h1>Best Health Care</h1>
-						<h3>Very Epic</h3>
+						<h3>Olex Health Care</h3>
 						<a class="btn btn-outline-light btn-lg" href="#"style="margin-top: 20px; ">Apply Now</a>
 					</div>    
 				</div>
