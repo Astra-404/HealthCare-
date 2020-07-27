@@ -1,8 +1,13 @@
 .nav-content{
 	padding: 10px;
 }
+
+.navbar-brand{
+	color: #ffff;
+}
 .nav-item{
 	padding-top: 20px;
+	color: #ffff;
 }
 .cart{
 	padding-top: 20px;
