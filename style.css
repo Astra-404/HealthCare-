@@ -1,26 +1,253 @@
-.nav-content{
-	padding: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-.navbar-brand{
-	color: #ffff;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #413f3f;
+    display: block;
 }
-.nav-item{
-	padding-top: 20px;
-	color: #ffff;
+
+.inner-footer {
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+
 }
-.cart{
-	padding-top: 20px;
+
+.footer-items {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
-ul li a:hover{
-	text-decoration: none; 
-	font-color:#317bff;	
-	
+
+h1 {
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
 }
-ul li a{
-	font-weight: 600;
-	color:#a7adbc;
+
+.footer-items p {
+    color: grey;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
 }
-.search{
-	border-radius:20%;
+
+h2 {
+    margin: 5px 0;
+    color: rgb(212, 211, 211);
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppsercase;
+}
+
+.border {
+    height: 2px;
+    width: 50px;
+    background: rgb(233, 233, 233);
+}
+
+ul {
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing:  0.5px;
+}
+
+ul a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+ul a:hover {
+    color: rgb(211, 30, 30);
+}
+
+ul li {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+li i {
+    margin-right: 20px;
+}
+
+.socialMedia {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.socialMedia a {
+    text-decoration: none;
+}
+
+.socialMedia i {
+    height: 15px;
+    width: 15px;
+    margin: 20px 5px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid grey;
+    transition: 0.3s;
+}
+
+.socialMedia i:hover {
+    background: grey;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #747373;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1085px) {
+    .footer-items {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 990px) {
+    .footer-items {
+        width: 100%;
+    }
+    .Card{
+        margin-top:20px;
+      
+      }
+      .images{
+        height:auto;
+      }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    background-origin: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #333333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    color: rgb(230, 228, 228);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content:space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    color: #ffff;
+    list-style: none;
+}
+
+.nav-links a {
+    color: aliceblue;
+    text-decoration: none;
+    letter-spacing:3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 40px;
+    transition: all 0.4s ease
+}
+
+
+@media screen and (max-width: 990px) {
+    .nav-links {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        color: white;
+        background-color:#333333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
 }
